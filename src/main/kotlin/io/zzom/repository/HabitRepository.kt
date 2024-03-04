@@ -5,5 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface HabitRepository : JpaRepository<Habit, Long>{
+interface HabitRepository : JpaRepository<Habit, Long> {
+    fun findAllByUserId(userId: Long): List<Habit>
 }

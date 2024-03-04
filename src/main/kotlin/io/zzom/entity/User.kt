@@ -8,7 +8,7 @@ import jakarta.persistence.*
 class User(name: String) {
     @Id
     @Column
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "increment")
     var id: Long = 0
 
     @Column(nullable = false)
